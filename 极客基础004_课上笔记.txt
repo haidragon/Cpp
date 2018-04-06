@@ -1,0 +1,148 @@
+# 1. 创建数据库(注释的内容是可选的,用于指定数据库的默认字符编码,排序方式)
+create database 数据库名 /*DEFAULT CHARACTER SET utf8 COLLATE utf8_bin*/;
+
+# 2. 显示所有的数据库
+show databases;
+
+# 3. 显示一个数据库的创建语句
+show create database 数据库名;
+
+# 4. 修改数据库(修改默认的字符编码集)
+alter database 数据库名 DEFAULT CHARACTER SET gb2312;
+
+# 5. 删除
+drop database 数据库名;
+
+
+# 6. 创建表
+create table 表的名字
+(
+	字段名1 字段1的类型,
+	字段名2 字段2的类型,
+)/*CHARACTER SET utf8 COLLATE utf8_bin*/
+6.1 示例
+create table 学生表
+(
+	id int,
+	name varchar(32),
+	hight double
+)
+
+
+# 二. 操作数据表的字段
+# 主要用到的关键字:
+# 1. 数据对象操作关键字
+# 1.1 show : 显示数据对象
+# 1.2 create : 创建数据对象
+# 1.3 alter : 修改数据对象
+# 1.4 drop : 删除数据对象
+# 2. 数据表操作关键字
+# 2.1 alter .. add  : 给数据表添加新列
+# 2.2 alter .. change  : 修改数据表的列的名字,数据类型,位置
+# 2.3 alter .. drop    : 删除数据表中的列
+
+# 7. 显示一个数据库中的所有的数据表
+show tables;
+
+# 8. 显示一个数据表的创建语句
+show create table 表的名字;
+
+# 9. 追加一个列到数据表 (add)
+	ALTER TABLE 表的名字
+	ADD COLUMN 新列的名字 新列的数据类型 /*AFTER 新列的前一列*/;
+例子: 将 新的列: age int , 插入表中的id列之后:
+	ALTER TABLE `用户表`
+	ADD COLUMN age int AFTER id;
+
+# 10. 修改列的类型, 列的名字, 列的顺序 (change)
+	ALTER TABLE `列的名字`
+	CHANGE COLUMN 
+	`旧列名` `新列列名` 新列的新数据类型 AFTER `新列的上一列`;
+
+# 11. 删除一个列(drop)
+	alter table 表的名字
+	drop 列的名字;
+	
+# 12. 删除整张表
+	drop table 表的名字
+
+	
+# 三. 操作数据表的数据
+13. 插入数据(insert into .. values)
+13.1 部分插入(要在表名之后用圆括号将要插入的列的名字给出)
+	insert into 用户表 (id,name)
+	values(1,'如花');
+13.2 全部插入(不需要给出列名,值列表中的每个值的顺序需要和表中的列的顺序一致)
+	insert into 用户表 
+	values(2,'小明' , 1.56,11);
+13.3 插入多行数据(可以给出多个值列表,值列表之间使用逗号分隔)
+	insert into 用户表 
+	values(2,'小明' , 1.56,11) , (3,"小董",1.2, 8);
+	
+# 14. 更新表中的数据(update .. set .. [where])
+# 14.1 更新全部的数据(将表中的所有的数据的某个的值设置为指定值)
+	update 表的名字
+	set 字段名 = 值;
+# 14.2 精确更新某一行
+	update 表的名字
+	set 字段名 = 值 
+	where id = 0; # 当行的id等于0的时候,才修改
+# 15 删除表中的数据
+	delete from 表的名字 [where .. ];
+例子: 将用户表中名字叫做小红的记录删除掉:
+	delete from 用户表 where name = '小红';
+
+# 16. 约束	
+primary key : 主键约束
+not null : 非空约束
+unique : 唯一约束
+default : 默认值
+foreign key : 外键约束
+
+# 17 添加约束:
+ALTER TABLE `用户表`
+MODIFY COLUMN `name`  varchar(32) unique NOT NULL DEFAULT '' AFTER `id`;
+
+
+
+# 18. 设置字段的值跟随插入而自动增加
+AUTO_INCREMENT : 自动增加
+	
+	
+# 19. 查询数据(select)
+
+
+# 查询全部数据,并输出所有列
+select * from 用户表;
+
+# 查询全部数据, 并只输出给出的列
+select name , age from 用户表;
+
+# 查询全部数据, 并只输出给出的列
+# 且将列的名字改成其它的名字输出
+select name as 姓名, age as 年龄 from 用户表;
+
+# 输出数据时, 将重复的数据过滤
+SELECT DISTINCT FROM 用户表;
+
+# 查找符合指定条件的数据
+# 条件的运算符有: > , < , >=,<= , <>
+# 逻辑运算符 : and , or , not
+# 模糊匹配 : like 和通配符结合使用, 
+# 通配符有:'_'和'%'
+select * from 用户表 where age < 18 and height < 1.8;
+
+# 找出所有名字中第一个字符是'小'的用户
+select * from 用户表 where name like '小_';
+
+//视频聊天
+void CCmyCharDialog::on_pushButton_7_clicked()
+{
+    //发送内容
+    QString msg=username+tr("%")+tr("shiping")+tr("%")+tr("shiping")+tr("%")+this->jeshou;
+    mytcpSocket->write(msg.toStdString().data());
+
+    mycamaraGet=new camaraGet();
+    mycamaraGet->show();
+
+}
