@@ -1,0 +1,52 @@
+﻿<!DOCTYPE HTML><html><head><style id="wiz_custom_css">html, body {font-size: 12pt;}body {font-family: Helvetica, "Hiragino Sans GB", "微软雅黑", "Microsoft YaHei UI", SimSun, SimHei, arial, sans-serif;line-height: 1.6;margin: 0 auto;padding: 20px 16px;padding: 1.25rem 1rem;}h1, h2, h3, h4, h5, h6 {margin:20px 0 10px;margin:1.25rem 0 0.625rem;padding: 0;font-weight: bold;}h1 {font-size:20pt;font-size:1.67rem;}h2 {font-size:18pt;font-size:1.5rem;}h3 {font-size:15pt;font-size:1.25rem;}h4 {font-size:14pt;font-size:1.17rem;}h5 {font-size:12pt;font-size:1rem;}h6 {font-size:12pt;font-size:1rem;color: #777777;margin: 1rem 0;}div, p, ul, ol, dl, li {margin:0;}blockquote, table, pre, code {margin:8px 0;}ul, ol {padding-left:32px;padding-left:2rem;}ol.wiz-list-level1 > li {list-style-type:decimal;}ol.wiz-list-level2 > li {list-style-type:lower-latin;}ol.wiz-list-level3 > li {list-style-type:lower-roman;}blockquote {padding:0 12px;padding:0 0.75rem;}blockquote > :first-child {margin-top:0;}blockquote > :last-child {margin-bottom:0;}img {border:0;max-width:100%;height:auto !important;margin:2px 0;}table {border-collapse:collapse;border:1px solid #bbbbbb;}td, th {padding:4px 8px;border-collapse:collapse;border:1px solid #bbbbbb;min-height:28px;word-break:break-all;box-sizing: border-box;}.wiz-hide {display:none !important;}
+
+
+@media only screen and (-webkit-max-device-width: 1024px), only screen and (-o-max-device-width: 1024px), only screen and (max-device-width: 1024px), only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (-o-min-device-pixel-ratio: 3), only screen and (min-device-pixel-ratio: 3) {
+    html, body {
+        font-size: 17px;
+    }
+
+    body {
+        line-height: 1.7;
+        padding: 0.75rem 0.9375rem;
+        color: #353c47;
+    }
+
+    h1 {
+        font-size: 2.125rem;
+    }
+
+    h2 {
+        font-size: 1.875rem;
+    }
+
+    h3 {
+        font-size: 1.625rem;
+    }
+
+    h4 {
+        font-size: 1.375rem;
+    }
+
+    h5 {
+        font-size: 1.125rem;
+    }
+
+    h6 {
+        color: inherit;
+    }
+
+    ul, ol {
+        padding-left: 2.5rem;
+    }
+
+    blockquote {
+        padding: 0 0.9375rem;
+    }
+}
+
+html, body {
+    font-family:Helvetica Neue;
+    font-size:15px;
+    background-color:#FFFFFF;
+}</style></head><body class="" ><p>1.关于new运算符的下列描述中，错误的是（）。 <br></p><p>使用new[]分配的空间需要使用delete[]释放<br></p><p>它可以用来动态创建对象和对象数组<br></p><p>使用它创建对象数组时必须指定初始值<br></p><p>使用它创建对象时要调用构造函数<br></p><p>2.派生类的构造和析构函 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;数正确的调用过程是（）。 <br></p><p>子类构造函数-&gt;父类构造函数-&gt;子类析构函数-&gt;父类析构函数<br></p><p>父类构造函数-&gt;子类构造函数-&gt;子类析构函数-&gt;父类析构函数<br></p><p>父类构造函数-&gt;子类构造函数-&gt;父类析构函数-&gt;子类析构函数<br></p><p>子类构造函数-&gt;父类构造函数-&gt;父类析构函数-&gt;子类析构函数<br></p><p>3.哪个选项中的派生类对成员进行了错误的访问（）。 <br></p><p>&nbsp;  class A {<br></p><p>&nbsp;  public:&nbsp; &nbsp; &nbsp; int a;<br></p><p>&nbsp;  private:&nbsp; &nbsp;  int b;<br></p><p>&nbsp;  protected: int c;<br></p><p>&nbsp; };<br></p><p> <br></p><p>class B : protected A { B(){ this-&gt;c = 0; } };<br></p><p>class B : private A { B() { this-&gt;b = 0; } };<br></p><p>class B : public A { B(){ this-&gt;a = 0; } }<br></p><p>class B : private A { B() { this-&gt;c = 0; } };<br></p><p>4.对于多继承的描述错误的是（）。 <br></p><p>使用虚基类可以解决部分菱形继承产生的问题<br></p><p>访问相同基类的成员时可能出现二义性<br></p><p>使用作用于运算符可以解决二义性问题<br></p><p>访问不同类的同名成员时不会出现二义性<br></p><p>5.以下正确使用虚基类的方式为（）。 <br></p><p>① class A : public virtual B { }<br></p><p>② virtual class A : public B { }<br></p><p>③ class A : virtual public B { }<br></p><p>④ virtual class A { };<br></p><p>① ③<br></p><p>② ④<br></p><p>③ ④<br></p><p>① ②<br></p><p>6.设有如下类定义，则sizeof(obj)的值为（）。 <br></p><p>class A{<br></p><p>&nbsp; &nbsp; int a; <br></p><p>&nbsp; &nbsp; char b;<br></p><p>&nbsp; &nbsp; int c;<br></p><p>&nbsp; &nbsp; virtual void show() { };<br></p><p>} obj;<br></p><p>16<br></p><p>13<br></p><p>12<br></p><p>9<br></p><p>7.以下对抽象类的描述错误的是（）。 <br></p><p>class A{virtual void show() = 0; }; 是一个抽象类<br></p><p>抽象类一般作用于基类，它不能被实例化<br></p><p>一个类中如果定义了纯虚函数，则这个类会变成抽象类<br></p><p>抽象类的派生类必须实现它的纯虚函数<br></p><p>8.当一个类的某个函数被说明为virtual时，该函数在该类的所有派生类中（）。 <br></p><p>都不是虚函数<br></p><p>都是虚函数<br></p><p>只有被重新说明为virtual时才是虚函数<br></p><p>只有被重新说明时才是虚函数<br></p><p>9.对重载、重写和重定义描述错误的是（）。<br></p><p>派生类对基类同名函数的覆盖叫做重定义<br></p><p>重载是同种函数的不同实现<br></p><p>被重写函数的函数名和参数相同<br></p><p>进行重定义时，函数的参数个数和类型必须相同<br></p><p>10.下列程序的输出结果为（）。 <br></p><p>class A { public: virtual void show() { cout &lt;&lt; "A"; }; };<br></p><p>class B: public A { public: void show() { cout &lt;&lt; "B"; }; };<br></p><p>class C: public B { public: void show() { cout &lt;&lt; "C"; };};<br></p><p>class D : public A { };<br></p><p>int main(void)<br></p><p>{<br></p><p>&nbsp; &nbsp; A* arr[4] = { new A, new B, new C, new D };<br></p><p>&nbsp; &nbsp; for (int i = 0; i &lt; 4; ++i)<br></p><p>&nbsp; &nbsp; &nbsp; &nbsp; arr[i]-&gt;show();<br></p><p>&nbsp; &nbsp; return 0;<br></p><p>}<br></p><p>ABBA<br></p><p>ABCA<br></p><p>BCAB<br></p><p>BBCB<br></p><p>11.以下描述正确的选项是（）。 <br></p><p>构造函数和析构函数都可以说明为虚函数<br></p><p>当类中存在虚函数时，类的大小不会改变<br></p><p>一个类对象可以存在多个虚表指针<br></p><p>同一个类的不同对象虚表指针指向的位置也不同<br></p><p>12.对模板使用错误的选项是（）。 <br></p><p>template&lt;class T&gt; void func(T&amp; a, T&amp; b) { a = 10; b = 10; }<br></p><p>template&lt;T&gt; void func(T&amp; a, T&amp; b) { a = 10; b = 10; }<br></p><p>template&lt;typename T&gt; void func(T&amp; a, T&amp; b) { a = 10; b = 10; }<br></p><p>class A { public: int a; };template&lt;typename T&gt; void func(T&amp; a) { a.a = 10; }<br></p><p>13.对模板描述正确的是（）。 <br></p><p>不可以对函数模板进行重载<br></p><p>模板特化只能用于对该模板的某一种类型进行全部处理的情况<br></p><p>对于功能相同，实现相同，但需要处理不同类型的类，可以定义成类模板<br></p><p>函数模板是对函数的定义<br></p><p>14.一个基类以私有方式派生时，其基类中的公有成员和保护成员在派生类中( )。 <br></p><p>仍为公有的和保护的成员<br></p><p>均成为公有的成员<br></p><p>均成为私有的成员<br></p><p>均成为保护的成员<br></p><p>15. 对容器正确的说明为（）。 <br></p><p>array和map 都是关联容器<br></p><p>关联容器中的字符串是按顺序保存的<br></p><p>所有容器中都包含各自的迭代器<br></p><p>vector和set都是顺序容器<br></p><p>16.在公有派生类的成员函数不能直接访问基类中继承来的某个成员，则该成员一定是基类中的（）。 <br></p><p>保护成员或私有成员<br></p><p>公有成员<br></p><p>保护成员<br></p><p>私有成员<br></p><p>17.在C++中，不能被派生类继承的有（）。 <br></p><p>静态成员函数<br></p><p>虚函数<br></p><p>构造函数<br></p><p>常成员函数<br></p><p>18.静态函数不能说明为（）。 <br></p><p>无返回值函数<br></p><p>虚函数<br></p><p>有参函数<br></p><p>无参函数<br></p><p>19.以下使用string与比较字符串错误的为（）。 <br></p><p>str.compare("1234");<br></p><p>strcmp(str.c_str(), "1234");<br></p><p>str.find("1234");<br></p><p>str == "1234";<br></p><p>20.下列叙述中不正确的是( )。 <br></p><p>抽象类不能作为派生类的基类<br></p><p>纯虚函数没有其函数的实现部分<br></p><p>含纯虚函数的类为抽象类<br></p><p>不能直接由抽象类建立对象<br></p></body></html>
